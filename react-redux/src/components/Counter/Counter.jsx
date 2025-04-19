@@ -1,7 +1,7 @@
 import React from 'react';
 
 //first import increment,decrement and reset function from countrSlice
-import { increment,decrement,reset } from '../features/counter/CounterSlice';
+import { increment,decrement,reset } from '../../features/counter/CounterSlice';
 
 import { useSelector,useDispatch } from 'react-redux';
 
