@@ -10,11 +10,11 @@ const Container=()=>{
     const navigate=useNavigate();
 
     useEffect(()=>{
-        setToggle(pathname=='/' ? true : false);
+        setToggle(pathname=='/app' ? true : false);
     },[pathname]);
 
     const handleClick=()=>{
-    toggle ? navigate('/todoapp') : navigate('/');
+    toggle ? navigate('/app/todoapp') : navigate('/app');
     setToggle(!toggle);
     }
 

@@ -13,9 +13,9 @@ function App() {
    <Provider store={store}>
    <BrowserRouter>
    <Routes>
-   <Route path='/' element={<Home />}>
-   <Route path='/' element={<Counter />}></Route>
-   <Route path ='/todoapp' element={<Todoapp />}></Route>
+   <Route path='/app' element={<Home />}>
+   <Route path='/app' element={<Counter />}></Route>
+   <Route path ='/app/todoapp' element={<Todoapp />}></Route>
    </Route>
    </Routes>
    </BrowserRouter>
