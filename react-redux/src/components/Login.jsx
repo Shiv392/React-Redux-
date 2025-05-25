@@ -8,6 +8,7 @@ const Login=()=>{
 
  const handleSubmit=(e)=>{
     e.preventDefault();
+    localStorage.setItem('token',Math.random(1000,100));
     navigate('/app');
  }
 
