@@ -1,7 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState={  //initial value of the state ------------->
-    value : 0
+    value : Number(sessionStorage.getItem('count')) || 0
+}
+
+const StoreCounter=(count)=>{
+   sessionStorage.setItem('count',String(count));
 }
 
 const counterSlice=createSlice({
@@ -9,13 +13,16 @@ const counterSlice=createSlice({
     initialState,
     reducers:{
         increment:(state)=>{
-            state.value+=1
+            state.value+=1;
+            StoreCounter(state.value)
         },
         decrement:(state)=>{
-            state.value-=1
+            state.value-=1;
+            StoreCounter(state.value);
         },
         reset:(state)=>{
-            state.value=0
+            state.value=0;
+            StoreCounter(0);
         }
     }
 })
